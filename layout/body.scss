@@ -1,0 +1,28 @@
+/* body - éléments généraux sur tout le site*/
+
+body {
+  font-family: $text-font;
+  margin: 0;
+  max-width: 1440px;
+  margin: auto;
+}
+
+ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+img {
+  position: relative;
+  height: 260px;
+  object-fit: cover;
+  width: 100%;
+
+  @include tablet-res {
+    height: 350px;
+  }
+
+  @include desktop-res {
+    height: 100%;
+  }
+}

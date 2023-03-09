@@ -1,0 +1,36 @@
+/*Code pour utiliser un display flex et les alignements nécessaires, tout est centré par défaut*/
+@mixin flexdisplay($justify: center, $align: center, $direction: row) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+@mixin desktop-res {
+  @media screen and (min-width:1280px) {
+    @content;
+  }
+}
+
+@mixin tablet-res {
+  @media screen and (min-width:600px) and (max-width:1279px) {
+    @content
+  }
+}
+
+
+@mixin basiclinkdisplay($bck-col) {
+  text-decoration: none;
+
+  @if (lightness($bck-col) < 30%) {
+    color: white;
+  }
+
+  @else {
+    color: black;
+  }
+
+  &:hover {
+    color: $primary-color;
+  }
+}
