@@ -2,11 +2,9 @@
 /*Utils*/
 /*Couleurs*/
 /*Polices*/
-/**/
-/**/
 /*Code pour utiliser un display flex et les alignements nécessaires, tout est centré par défaut*/
 /* utility classes*/
-/**Les noms des restaurants, le logo header et footer*/
+/*Les noms des restaurants, le logo header et footer*/
 .special-title {
   font-family: "Shrikhand";
   font-weight: normal;
@@ -31,7 +29,7 @@ qui fera elle 100% du paragraphe*/
   margin: 5px 0 15px 0;
   height: 3px;
   width: 40px;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
 }
 
 /**Titre logo footer desktop**/
@@ -109,37 +107,45 @@ img {
 
 /* footer.scss 
 Footer global utilisé dans chaque page du site*/
-footer {
-  background-color: rgb(50, 50, 50);
+.footer {
+  background-color: #353535;
+}
+.footer .container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+.footer__logo {
   color: white;
-  padding: 25px 20px 30px 20px;
+  font-family: "Shrikhand", "cursive";
+  margin: 0;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
 }
-@media screen and (min-width: 1280px) {
-  footer {
-    text-align: center;
-  }
-  footer ul {
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 20px;
-  }
+.footer__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
-footer li {
-  margin-bottom: 10px;
+.footer__listElement {
+  margin: 0.5rem 0;
 }
-footer li i {
-  width: 25px;
+.footer__listElement:first-child {
+  margin-top: 0;
 }
-footer li a {
+.footer__listElement:last-child {
+  margin-bottom: 0;
+}
+.footer__link {
+  color: white;
   text-decoration: none;
-  color: white;
 }
-footer li a:hover {
-  color: #9356DC;
+.footer__link:hover {
+  text-decoration: underline;
 }
-footer li em {
-  font-weight: bold;
-  font-style: normal;
+.footer__icon {
+  width: 1.2rem;
+  margin-right: 0.5rem;
 }
 
 /* main_restaurants.scss 
@@ -214,7 +220,7 @@ Code qui gère tous les coeurs du site avec l'animation de remplissage*/
   opacity: 0;
 }
 .fas.fa-heart::before {
-  background-image: linear-gradient(45deg, #FF79DA, #9356DC);
+  background-image: linear-gradient(45deg, #ff79da, #9356dc);
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -231,7 +237,7 @@ Code qui gère tous les coeurs du site avec l'animation de remplissage*/
 
 Code pour le bouton commande sur toutes les pages de menu + explorer sur page accueil*/
 button {
-  background: linear-gradient(#FF79DA, #9356DC);
+  background: linear-gradient(#ff79da, #9356dc);
   opacity: 1;
   border: none;
   border-radius: 30px;
@@ -362,7 +368,7 @@ Spécialité du chef      35€   <validation>
 
 /*****Part de la carte servant à valider le choix ***/
 .validation {
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   position: absolute;
   right: 0;
   top: 0;
@@ -390,7 +396,7 @@ Spécialité du chef      35€   <validation>
 Encart nouveau, utilisé pour l'instant sur la page d'accueil pour mettre en avant les nouveaux restaurants **/
 .nv {
   position: absolute;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   color: #217460;
   border-radius: 5px;
   width: 23.5%;
@@ -459,7 +465,7 @@ Encart nouveau, utilisé pour l'instant sur la page d'accueil pour mettre en ava
   background-color: #f2eafb;
 }
 .fonctionnement__card:hover i {
-  color: #9356DC;
+  color: #9356dc;
 }
 .fonctionnement__card__nbr {
   position: absolute;
@@ -469,7 +475,7 @@ Encart nouveau, utilisé pour l'instant sur la page d'accueil pour mettre en ava
   height: 20px;
   width: 20px;
   margin-top: 0;
-  background-color: #9356DC;
+  background-color: #9356dc;
   border-radius: 100px;
   color: white;
   font-size: 12px;
@@ -519,7 +525,7 @@ Encart nouveau, utilisé pour l'instant sur la page d'accueil pour mettre en ava
   color: black;
 }
 .carte_restaurant a:hover {
-  color: #9356DC;
+  color: #9356dc;
 }
 .carte_restaurant i {
   position: absolute;
@@ -621,7 +627,7 @@ code utilisé seulement sur la page d'accueil hors animation*/
 }
 
 .loadspin {
-  background: linear-gradient(#FF79DA, #9356DC);
+  background: linear-gradient(#ff79da, #9356dc);
   position: fixed;
   z-index: 2;
   left: 0;
@@ -637,7 +643,7 @@ code utilisé seulement sur la page d'accueil hors animation*/
 }
 .loadspin__text {
   font-family: "Shrikhand";
-  text-shadow: 2px 2px 2px #99E2D0;
+  text-shadow: 2px 2px 2px #99e2d0;
   font-size: 3em;
   animation: txtappear 1s ease-in-out;
   margin-bottom: 15px;
@@ -645,8 +651,8 @@ code utilisé seulement sur la page d'accueil hors animation*/
 .loadspin__circle {
   width: 70px;
   height: 70px;
-  border-top: 5px solid #FF79DA;
-  border-bottom: 5px solid #99E2D0;
+  border-top: 5px solid #ff79da;
+  border-bottom: 5px solid #99e2d0;
   border-radius: 100px;
   animation: spinner 1500ms linear;
   animation-iteration-count: 3;

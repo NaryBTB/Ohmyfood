@@ -1,7 +1,4 @@
-/* hearts.scss
-
-Code qui gère tous les coeurs du site avec l'animation de remplissage*/
-
+/* hearts.scss Code qui gère tous les coeurs du site avec l'animation de remplissage*/
 
 .far {
   /*Meme que sur la version accueil*/
@@ -22,7 +19,7 @@ Code qui gère tous les coeurs du site avec l'animation de remplissage*/
     cursor: pointer;
     opacity: 1;
 
-    &+.far {
+    & + .far {
       opacity: 0;
     }
   }
@@ -33,7 +30,6 @@ Code qui gère tous les coeurs du site avec l'animation de remplissage*/
     color: transparent;
   }
 }
-
 
 /*utilisé sur chaque page de retaurant comme conteneur pour les icones de coeur*/
 .fa-fw {
