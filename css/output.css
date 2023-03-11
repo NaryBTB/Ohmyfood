@@ -12,6 +12,9 @@
 
 /*appliquée sur des h et p*/
 .nomargin {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   margin-top: 0;
   margin-bottom: 0;
 }
